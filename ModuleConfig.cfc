@@ -47,7 +47,7 @@ component {
 		// SES Routes
 		routes = [
 			// Module Entry Point
-			{pattern="/", handler="oauth",action="index"},
+			{pattern="/", handler="home",action="index"},
 			{pattern="/oauth/:id?", handler="oauth",action="index"}
 		];
 
