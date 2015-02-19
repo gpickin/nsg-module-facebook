@@ -4,7 +4,7 @@ component {
 	this.title 				= "facebook";
 	this.author 			= "Jeremy R DeYoung";
 	this.webURL 			= "http://www.nextstep.guru";
-	this.description 		= "This is the default configuration for nsg's layout.";
+	this.description 		= "Coldbox Module to allow Social Login via Facebook";
 	this.version			= "1.0.3";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;

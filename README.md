@@ -16,7 +16,7 @@ Setup & Installation
             scope           = "public_profile,email,user_friends",
             responseType    = "code"
         }
-    },
+    }
 
 Interception Point
 ---------------------
