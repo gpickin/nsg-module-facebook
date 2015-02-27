@@ -5,7 +5,7 @@ component {
 	this.author 			= "Jeremy R DeYoung";
 	this.webURL 			= "http://www.nextstep.guru";
 	this.description 		= "Coldbox Module to allow Social Login via Facebook";
-	this.version			= "1.0.3";
+	this.version			= "1.0.5";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -72,10 +72,6 @@ component {
 		var nsgSocialLogin = controller.getSetting('nsgSocialLogin',false,arrayNew());
 			arrayAppend(nsgSocialLogin,{"name":"facebook","icon":"facebook","title":"Facebook"});
 			controller.setSetting('nsgSocialLogin',nsgSocialLogin);
-
-		var nsgMenu = controller.getSetting('nsgMenu',false,[]);
-		// menu::login
-		arrayAppend(nsgMenu,{ "menu"="topRight","subid":"login","icon"="fa fa-facebook","id":"loginFacebook","title":"Sign-in with Facebook","link":"/security/login/facebook","roles":"","type":"link","isUserLoggedIn":false });
 	}
 
 	/**
