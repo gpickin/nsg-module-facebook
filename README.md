@@ -20,7 +20,7 @@ Setup & Installation
 
 Interception Point
 ---------------------
-If you want to capture any data from a successful login, use the interception point twitterLoginSuccess. Inside the interceptData structure will contain all the provided data from twitter for the specific user.
+If you want to capture any data from a successful login, use the interception point facebookLoginSuccess. Inside the interceptData structure will contain all the provided data from twitter for the specific user.
 
 ####An example interception could look like this
 
