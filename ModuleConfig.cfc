@@ -1,7 +1,7 @@
 component {
 
 	// Module Properties
-	this.title 				= "facebook";
+	this.title 			= "facebook";
 	this.author 			= "Jeremy R DeYoung";
 	this.webURL 			= "http://www.nextstep.guru";
 	this.description 		= "Coldbox Module to allow Social Login via Facebook";
@@ -17,7 +17,7 @@ component {
 	// CF Mapping
 	this.cfmapping			= "facebook";
 	// Module Dependencies
-	this.dependencies 		= ["nsg-module-security","nsg-module-oauth"];
+	this.dependencies 		= [ "nsg-module-security", "nsg-module-oauth" ];
 
 	function configure(){
 
@@ -30,7 +30,7 @@ component {
 		settings = {
 			oauth = {
 				oauthVersion 		= 2,
-				authorizeRequestURL = "https://www.facebook.com/dialog/oauth",
+				authorizeRequestURL 	= "https://www.facebook.com/dialog/oauth",
 				tokenRequestURL 	= "https://graph.facebook.com/oauth/access_token"
 			}
 		};
@@ -47,8 +47,8 @@ component {
 		// SES Routes
 		routes = [
 			// Module Entry Point
-			{pattern="/", handler="oauth",action="index"},
-			{pattern="/oauth/:id?", handler="oauth",action="index"}
+			{ pattern="/", handler="oauth", action="index" },
+			{ pattern="/oauth/:id?", handler="oauth", action="index" }
 		];
 
 		// Custom Declared Points
@@ -60,18 +60,15 @@ component {
 		interceptors = [
 		];
 
-		// Binder Mappings
-		binder.mapDirectory( "#moduleMapping#.models" );
-
 	}
 
 	/**
 	* Fired when the module is registered and activated.
 	*/
 	function onLoad(){
-		var nsgSocialLogin = controller.getSetting('nsgSocialLogin',false,arrayNew());
-			arrayAppend(nsgSocialLogin,{"name":"facebook","icon":"facebook","title":"Facebook"});
-			controller.setSetting('nsgSocialLogin',nsgSocialLogin);
+		var nsgSocialLogin = controller.getSetting( 'nsgSocialLogin', false, arrayNew() );
+		arrayAppend( nsgSocialLogin, { "name" : "facebook", "icon" : "facebook", "title" : "Facebook" } );
+		controller.setSetting( 'nsgSocialLogin', nsgSocialLogin );
 	}
 
 	/**
