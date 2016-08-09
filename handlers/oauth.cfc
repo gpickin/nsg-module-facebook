@@ -54,7 +54,7 @@ component {
 					}
 				}
 
-				setNextEvent('facebook/oauth/activateUser')
+				setNextEvent('facebook/oauth/activateUser');
 			}else{
 				announceInterception( state='facebookLoginFailure', interceptData=results );
 				announceInterception( state='loginFailure', interceptData=results );
